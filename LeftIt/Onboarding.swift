@@ -7,8 +7,11 @@
 
 import SwiftUI
 
-struct Onboard: View {
-    @AppStorage("isOnboarding") var isOnboarding: Bool?
+struct Onboarding: View {
+    
+    @State var locationManager = MapKitAuth.shared
+    
+    @AppStorage ("isOnboarding") var isOnboarding: Bool?
     @Environment(\.dismiss) var dismiss
     var body: some View {
         VStack {
@@ -26,7 +29,7 @@ struct Onboard: View {
             Spacer()
             Spacer()
             Button(action: {
-                MapKitAuth.shared.checkIfLocationIsEnabled()
+                locationManager.requestStatus()
                 isOnboarding = false
                 dismiss()
             }, label: {
@@ -46,5 +49,5 @@ struct Onboard: View {
 }
 
 #Preview {
-    Onboard()
+    Onboarding()
 }

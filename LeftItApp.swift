@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct LeftItApp: App {
     
-    @AppStorage("isOnboarding") var isOnboarding = true
-    
+    @AppStorage ("isOnboarding") var isOnboarding = true
+
     var body: some Scene {
         WindowGroup {
             if isOnboarding {
-                Onboard()
+                Onboarding()
                     .onDisappear {
                         isOnboarding = false
                     }

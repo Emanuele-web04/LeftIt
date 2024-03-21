@@ -11,7 +11,7 @@
 		C00179DC2BAB2CF500E04897 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00179DB2BAB2CF500E04897 /* ContentView.swift */; };
 		C00179DE2BAB2CF600E04897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00179DD2BAB2CF600E04897 /* Assets.xcassets */; };
 		C00179E22BAB2CF600E04897 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00179E12BAB2CF600E04897 /* Preview Assets.xcassets */; };
-		C04BDCF22BAB9E28001DBF95 /* Onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04BDCF12BAB9E28001DBF95 /* Onboard.swift */; };
+		C04BDCF22BAB9E28001DBF95 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04BDCF12BAB9E28001DBF95 /* Onboarding.swift */; };
 		C04BDCF52BABA36B001DBF95 /* MapKitAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04BDCF42BABA36B001DBF95 /* MapKitAuth.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,7 +22,7 @@
 		C00179DD2BAB2CF600E04897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C00179DF2BAB2CF600E04897 /* LeftIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeftIt.entitlements; sourceTree = "<group>"; };
 		C00179E12BAB2CF600E04897 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C04BDCF12BAB9E28001DBF95 /* Onboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboard.swift; sourceTree = "<group>"; };
+		C04BDCF12BAB9E28001DBF95 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		C04BDCF32BABA25F001DBF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C04BDCF42BABA36B001DBF95 /* MapKitAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitAuth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,7 +61,7 @@
 				C04BDCF32BABA25F001DBF95 /* Info.plist */,
 				C04BDCF42BABA36B001DBF95 /* MapKitAuth.swift */,
 				C00179DB2BAB2CF500E04897 /* ContentView.swift */,
-				C04BDCF12BAB9E28001DBF95 /* Onboard.swift */,
+				C04BDCF12BAB9E28001DBF95 /* Onboarding.swift */,
 				C00179DD2BAB2CF600E04897 /* Assets.xcassets */,
 				C00179DF2BAB2CF600E04897 /* LeftIt.entitlements */,
 				C00179E02BAB2CF600E04897 /* Preview Content */,
@@ -147,7 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C04BDCF22BAB9E28001DBF95 /* Onboard.swift in Sources */,
+				C04BDCF22BAB9E28001DBF95 /* Onboarding.swift in Sources */,
 				C00179DC2BAB2CF500E04897 /* ContentView.swift in Sources */,
 				C00179DA2BAB2CF500E04897 /* LeftItApp.swift in Sources */,
 				C04BDCF52BABA36B001DBF95 /* MapKitAuth.swift in Sources */,
