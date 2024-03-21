@@ -1,0 +1,67 @@
+//
+//  MapKitAuth.swift
+//  LeftIt
+//
+//  Created by Emanuele Di Pietro on 21/03/24.
+//
+
+import Foundation
+import SwiftUI
+import MapKit
+
+final class MapKitAuth: NSObject, ObservableObject, CLLocationManagerDelegate {
+    var locationManager: CLLocationManager?
+
+    @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 43.457105, longitude: -80.508361), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+
+    static let shared = MapKitAuth()
+    
+    var binding: Binding<MKCoordinateRegion> {
+        Binding {
+            self.mapRegion
+        } set: { newRegion in
+            self.mapRegion = newRegion
+        }
+    }
+
+    func checkIfLocationIsEnabled() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager = CLLocationManager()
+            locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager!.delegate = self
+        } else {
+            print("Show an alert letting them know this is off")
+        }
+    }
+
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        let previousAuthorizationStatus = manager.authorizationStatus
+        manager.requestAlwaysAuthorization()
+        if manager.authorizationStatus != previousAuthorizationStatus {
+            checkLocationAuthorization()
+        }
+    }
+
+    private func checkLocationAuthorization() {
+            guard let location = locationManager else {
+                return
+            }
+
+            switch location.authorizationStatus {
+            case .notDetermined:
+                print("Location authorization is not determined.")
+            case .restricted:
+                print("Location is restricted.")
+            case .denied:
+                print("Location permission denied.")
+            case .authorizedAlways, .authorizedWhenInUse:
+                if let location = location.location {
+                    mapRegion = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+                }
+
+            default:
+                break
+            }
+        }
+}
+
