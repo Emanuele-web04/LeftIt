@@ -29,7 +29,7 @@ struct Onboarding: View {
             Spacer()
             Spacer()
             Button(action: {
-                locationManager.requestStatus()
+                locationManager.checkIfLocationIsEnabled()
                 isOnboarding = false
                 dismiss()
             }, label: {

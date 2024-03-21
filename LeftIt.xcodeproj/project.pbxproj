@@ -13,6 +13,8 @@
 		C00179E22BAB2CF600E04897 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00179E12BAB2CF600E04897 /* Preview Assets.xcassets */; };
 		C04BDCF22BAB9E28001DBF95 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04BDCF12BAB9E28001DBF95 /* Onboarding.swift */; };
 		C04BDCF52BABA36B001DBF95 /* MapKitAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04BDCF42BABA36B001DBF95 /* MapKitAuth.swift */; };
+		C04BDCF72BAC97CE001DBF95 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04BDCF62BAC97CE001DBF95 /* MapView.swift */; };
+		C07DDCDB2BACE1CE004C3C80 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07DDCDA2BACE1CE004C3C80 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		C04BDCF12BAB9E28001DBF95 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		C04BDCF32BABA25F001DBF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C04BDCF42BABA36B001DBF95 /* MapKitAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitAuth.swift; sourceTree = "<group>"; };
+		C04BDCF62BAC97CE001DBF95 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		C07DDCDA2BACE1CE004C3C80 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				C04BDCF32BABA25F001DBF95 /* Info.plist */,
 				C04BDCF42BABA36B001DBF95 /* MapKitAuth.swift */,
 				C00179DB2BAB2CF500E04897 /* ContentView.swift */,
+				C04BDCF62BAC97CE001DBF95 /* MapView.swift */,
+				C07DDCDA2BACE1CE004C3C80 /* Location.swift */,
 				C04BDCF12BAB9E28001DBF95 /* Onboarding.swift */,
 				C00179DD2BAB2CF600E04897 /* Assets.xcassets */,
 				C00179DF2BAB2CF600E04897 /* LeftIt.entitlements */,
@@ -149,7 +155,9 @@
 			files = (
 				C04BDCF22BAB9E28001DBF95 /* Onboarding.swift in Sources */,
 				C00179DC2BAB2CF500E04897 /* ContentView.swift in Sources */,
+				C04BDCF72BAC97CE001DBF95 /* MapView.swift in Sources */,
 				C00179DA2BAB2CF500E04897 /* LeftItApp.swift in Sources */,
+				C07DDCDB2BACE1CE004C3C80 /* Location.swift in Sources */,
 				C04BDCF52BABA36B001DBF95 /* MapKitAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +295,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LeftIt/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We would like to access your location.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "";
@@ -332,6 +341,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LeftIt/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We would like to access your location.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
 				INFOPLIST_KEY_NSLocationTemporaryUsageDescriptionDictionary = "";

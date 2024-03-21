@@ -11,7 +11,7 @@ import SwiftUI
 struct LeftItApp: App {
     
     @AppStorage ("isOnboarding") var isOnboarding = true
-
+    
     var body: some Scene {
         WindowGroup {
             if isOnboarding {

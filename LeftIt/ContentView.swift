@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct CalendarTypeNumber: Identifiable {
     var id = UUID()
@@ -55,9 +56,13 @@ class Block: Identifiable {
 
 struct ContentView: View {
     
+    @State private var showMap = false
+    
     let gridLayout: [GridItem] = Array(repeating: .init(.flexible(), spacing: 20), count: 2) // Adjust the spacing value as needed
     var blockObject = Block()
     @State private var searchText = ""
+    
+    let map = MapKitAuth.shared
     
     @ViewBuilder
     var locationRightNow: some View {
@@ -118,10 +123,10 @@ struct ContentView: View {
                 }
                 ToolbarItem(placement: .bottomBar) {
                     Button {
-                        
+                        showMap = true
                     } label: {
                         HStack {
-                            Image(systemName: "gear")
+                            Image(systemName: "map.fill")
                         }
                         .fontWeight(.medium)
                         .foregroundColor(.white)
@@ -131,9 +136,11 @@ struct ContentView: View {
                         .cornerRadius(50)
                         .padding(.vertical, 10)
                     }.frame(maxWidth: .infinity)
+                        .sheet(isPresented: $showMap, content: {
+                            MapView()
+                        })
                 }
             }
-            
         }.fontDesign(.rounded)
     }
 }
